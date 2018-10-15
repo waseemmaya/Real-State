@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>SHEIKH ASSOCIATE</title>
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive/responsive.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+
+
+</head>
+
+<body onload="catBungalow()">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="caviar-load"></div>
+        <div class="preload-icons">
+            <img class="preload-1" src="#" alt="">
+            <img class="preload-2" src="#" alt="">
+            <img class="preload-3" src="#" alt="">
+        </div>
+    </div>
+
+    <!-- ***** Search Form Area ***** -->
+    <div class="caviar-search-form d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-close-btn" id="closeBtn">
+                        <i class="pe-7s-close-circle" aria-hidden="true"></i>
+                    </div>
+                    <form action="#" method="get">
+                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Favourite Dish ...">
+                        <input type="submit" class="d-none" value="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <nav class="h-100 navbar navbar-expand-lg align-items-center">
+                            <a class="navbar-brand" href="index.html">SHEIKH ASSOCIATE</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav"
+                                aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                            <div class="collapse navbar-collapse" id="caviarNav">
+                                <ul class="navbar-nav ml-auto" id="caviarMenu">
+    
+    
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="regular-page.html">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="dropdown show">
+                                            <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                Category
+                                            </a>
+    
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="flat.html">Flat</a>
+                                                <a class="dropdown-item" href="home.html">House</a>
+                                                <a class="dropdown-item" href="bungalow.html">Bungalow</a>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+    
+    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="panel/post.html">Login</a>
+                                    </li>
+                                </ul>
+                                <!-- Search Btn -->
+                                <div class="caviar-search-btn">
+                                    <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcumb Area Start ***** -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-6.jpg)">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Breadcumb Area End ***** -->
+
+    <!-- ***** Regular Page Area Start ***** -->
+    <section class="caviar-regular-page section-padding-100">
+        <h1> CARD AREA TO SHOW</h1>
+        <div class="row" id="catWise">
+            </div>
+    </section>
+    <!-- ***** Regular Page Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="caviar-footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-text">
+                        <a href="#" class="navbar-brand">SHEIKH ASSOCIATE</a>
+
+                        <p>Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> This template is made with <i
+                                class="fa fa-heart-o" aria-hidden="true"></i> by <a href="hk78150@gmail.com" target="_blank">al
+                                razzaq tech</a></p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery-2.2.4 js -->
+    <script src="http://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+    <!-- Popper js -->
+    <!-- Bootstrap-4 js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/others/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <script src="js/wm_main_js//wm_fire.js"></script>
+    <script src="js/wm_main_js//wm_main.js"></script>
+</body>

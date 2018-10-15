@@ -1,0 +1,266 @@
+/* !
+ * Project_Name: Themezy Real Estate Theme
+ * Author: Themezy
+ * Email: info@themezy.com
+ * URL: http://themezy.com
+ */
+/*===========================================  Importing CSS Libraries ===========================================*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+strong {
+  font-weight: bold;
+}
+
+/* Global Styles */
+body {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Titillium Web", "Roboto Condensed", "Open Sans", sans-serif;
+  line-height: normal;
+  color: #7b7a82;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  overflow: hidden;
+  border-radius: 5px;
+}
+figure img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Reusable Components Style */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  *zoom: 1;
+}
+.container:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  *zoom: 1;
+}
+.container-fluid:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  *zoom: 1;
+}
+.row:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+.posts-list .post {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .posts-list .post {
+    float: left;
+  }
+  .posts-list .post {
+    width: 50%;
+  }
+}
+
+.posts-list {
+  position: relative;
+  *zoom: 1;
+  margin-bottom: 50px;
+}
+.posts-list:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+.posts-list .post {
+  margin-bottom: 30px;
+}
+.posts-list .post .post-content {
+  background: white;
+  border-radius: 5px;
+  position: relative;
+  /* padding-left: 240px; */
+  min-height: 250px;
+  padding: 8px 8px 8px 250px;
+}
+@media screen and (max-width: 480px) {
+  .posts-list .post .post-content {
+    padding-left: 10px;
+  }
+}
+.posts-list .post .featured-image {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+  .posts-list .post .featured-image {
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: center;
+  }
+  .posts-list .post .featured-image img {
+    border-radius: 5px;
+    display: inline-block;
+  }
+}
+
+.containers {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  *zoom: 1;
+}
+.containers:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+@media (min-width: 768px) {
+  .containers {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .containers {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .containers {
+    width: 1170px;
+  }
+}
+
+.posts-list .post .entry-title a {
+  color: #5a595e;
+}
+/* .posts-list .post .entry-title a:hover {
+  color: #eeb658;
+} */
+
+.entry-title {
+  /* font-weight: 20px !important;  */
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.adImages {
+  width: 200px;
+  height: 200px;
+}
+
+#allPosts {
+  padding: 20px;
+}

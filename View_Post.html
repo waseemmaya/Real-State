@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>SHEIKH ASSOCIATE</title>
+
+    <link href="css/flexslider.min.css" rel="stylesheet" type="text/css" media="all" />
+
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive/responsive.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+</head>
+
+<body onload="adView()">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="caviar-load"></div>
+        <div class="preload-icons">
+            <img class="preload-1" src="#" alt="">
+            <img class="preload-2" src="#" alt="">
+            <img class="preload-3" src="#" alt="">
+        </div>
+    </div>
+
+    <!-- ***** Search Form Area ***** -->
+    <div class="caviar-search-form d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-close-btn" id="closeBtn">
+                        <i class="pe-7s-close-circle" aria-hidden="true"></i>
+                    </div>
+                    <form action="#" method="get">
+                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Favourite Dish ...">
+                        <input type="submit" class="d-none" value="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <nav class="h-100 navbar navbar-expand-lg align-items-center">
+                        <a class="navbar-brand" href="index.html">SHEIKH ASSOCIATE</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#caviarNav"
+                            aria-controls="caviarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                        <div class="collapse navbar-collapse" id="caviarNav">
+                            <ul class="navbar-nav ml-auto" id="caviarMenu">
+
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="regular-page.html">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown show">
+                                        <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Category
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="flat.html">Flat</a>
+                                            <a class="dropdown-item" href="home.html">House</a>
+                                            <a class="dropdown-item" href="bungalow.html">Bungalow</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="panel/post.html">Login</a>
+                                </li>
+                            </ul>
+                            <!-- Search Btn -->
+                            <div class="caviar-search-btn">
+                                <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+   <!-- ****** Welcome Area Start ****** -->
+   <section class="caviar-hero-area" id="home">
+    <!-- Welcome Social Info -->
+    <!-- <div class="welcome-social-info">
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    </div> -->
+    <!-- Welcome Slides -->
+    <div class="single-hero-slides bg-img" style="background-image: url(img/bg-img/hero-4.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-11 col-md-6 col-lg-4">
+                    <div class="hero-content">
+                        <h2>SHEIKH ASSOCIATE</h2>
+                        <p>We provide you the best properties in Defence Housing Authority</p>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="false" style="font-size:30px;margin-right:6px"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="false" style="font-size:30px;margin-right:6px"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="false" style="font-size:30px;margin-right:6px"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- ****** Welcome Area End ****** -->
+    <!-- ***** Regular Page Area Start ***** -->
+    <section class="caviar-regular-page section-padding-100">
+        <div>
+
+
+            <h2 class="w3-center" id="title"></h2>
+
+            <div class="w3-content w3-display-container" id="slider">
+
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+
+
+            <div class="container table-responsive-lg">
+                <h2 class="mt-3 mb-3">Overview</h2>
+                <table id="table" class="table table-striped table-hover">
+
+
+                </table>
+                <div id="desc">
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ***** Regular Page Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="caviar-footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-text">
+                        <a href="#" class="navbar-brand">SHEIKH ASSOCIATE</a>
+
+                        <p>Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> This template is made with <i
+                                class="fa fa-heart-o" aria-hidden="true"></i> by <a href="hk78150@gmail.com" target="_blank">al
+                                razzaq tech</a></p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery-2.2.4 js -->
+    <script src="http://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+    <!-- Popper js -->
+    <!-- Bootstrap-4 js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/others/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <script src="js/wm_main_js//wm_fire.js"></script>
+    <script src="js/wm_main_js//wm_main.js"></script>
+    <script>
+
+        var slideIndex = 1;
+        setTimeout(function () {
+            showDivs(slideIndex);
+
+        }, 3000);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <style>
+        .mySlides {
+            width: 900px;
+            height: 400px;
+        }
+
+        #slider {
+            width: 600px;
+        }
+
+        .text-block {
+            position: absolute;
+            bottom: 20px;
+            opacity: 0.9;
+            /* border-radius: 1%; */
+            left: 20px;
+            background-color: black;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .mapicon {
+            margin: 5px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .mapLink {
+            /* opacity: 0.5; */
+            color: white;
+        }
+
+        #paragraph {
+            margin-top: 12px;
+            line-height: 35px;
+            /* font-size: 18px; */
+        }
+    </style>
+</body>
