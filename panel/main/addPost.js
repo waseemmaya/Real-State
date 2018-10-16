@@ -13,7 +13,6 @@ function handleFiles() {
   } else {
     imgArr = this.files;
   }
-  console.log("img", imgArr);
 }
 
 var imgLinks = [];
@@ -21,7 +20,6 @@ var imgLinks = [];
 function uploadImages(i) {
   var filename = Math.floor(100444234000 + Math.random() * 9032012000);
   imgName.push(filename);
-  console.log(imgName);
 
   var file = imgArr[i];
   var metadata = {
@@ -33,13 +31,10 @@ function uploadImages(i) {
     firebase.storage.TaskEvent.STATE_CHANGED,
     function(snapshot) {
       var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log("Upload is " + progress + "% done");
       switch (snapshot.state) {
         case firebase.storage.TaskState.PAUSED:
-          // console.log("Upload is paused");
           break;
         case firebase.storage.TaskState.RUNNING:
-          // console.log("Upload is running");
           break;
       }
     },
@@ -55,17 +50,13 @@ function uploadImages(i) {
     },
     function() {
       uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-        // console.log("File available at", downloadURL);
         imgLinks.push(downloadURL);
-        console.log("upco", uploadCount);
 
         if (uploadCount === imgArr.length) {
-          console.log("add chala2");
           add();
         } else {
           uploadCount++;
         }
-        // console.log('downloaded', imgLinks);
       });
     }
   );
@@ -73,10 +64,8 @@ function uploadImages(i) {
 
 function imgLoop() {
   // e.preventDefault();
-  console.log("upload", imgArr.length);
   for (let i = 0; i < imgArr.length; i++) {
     uploadImages(i);
-    console.log("add chala1");
   }
   return false;
 }
@@ -93,9 +82,10 @@ function add() {
   let areaUnit = document.getElementById("areaUnit").value;
   let area = document.getElementById("area").value;
   let description = document.getElementById("description").value;
-  description = description.replace(/\r\n|\n/g,'<br>');
+  description = description.replace(/\r\n|\n/g, "<br>");
   let link = document.getElementById("link").value;
   let address = document.getElementById("address").value;
+  let phone = document.getElementById("phone").value;
 
   let adImages = imgLinks;
 
@@ -109,6 +99,7 @@ function add() {
     bathroom,
     floor,
     areaUnit,
+    phone,
     area,
     description,
     address,

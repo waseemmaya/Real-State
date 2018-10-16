@@ -1,5 +1,7 @@
 var db = firebase.database();
+
 var count = 2;
+
 var a = document.getElementById("main");
 
 fetchAll = () => {
@@ -23,29 +25,6 @@ fetchAll = () => {
   });
 };
 
-fetchAll2 = () => {
-  count = count + 2;
-  let locationRef = db.ref("All").limitToLast(count);
-
-  locationRef.on("child_added", snap => {
-    let data = snap.val();
-    let key = snap.key;
-    a.innerHTML += `
-    <div class="col-12 col-sm-6 col-md-4">
-                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="0.5s">
-                        <img src="${data.adImages[0]}" alt="">
-                        <div class="dish-info">
-                            <h6 class="dish-name">${data.name}</h6>
-                            <p class="dish-price"><a onclick="openAd('${key}')" href="javascript:void(0)">${
-      data.category
-    }</a></p>
-                        </div>
-                    </div>
-                </div>
-    `;
-  });
-  return false;
-};
 
 catHome = () => {
   let a = document.getElementById("catWise");
@@ -136,42 +115,7 @@ function openAd(key) {
   return false;
 }
 
-function delTask(key) {
-  swal({
-    title: "Are you sure?",
-    text: "Once deleted, you will not be able to recover this file!",
-    icon: "warning",
-    buttons: true,
-    dangerMode: true
-  }).then(willDelete => {
-    if (willDelete) {
-      let delRef = db.ref(`All/${key}`);
 
-      delRef.once("value", snap => {
-        let allImages = snap.val().imgName;
-
-        for (let i = 0; i < allImages.length; i++) {
-          var storageRef = firebase.storage().ref();
-          var imgRef = storageRef.child(`Images/${allImages[i]}`);
-          imgRef
-            .delete()
-            .then(() => {
-              delRef.remove();
-            })
-            .catch(error => {});
-        }
-
-        var elem = document.getElementById(key);
-        elem.remove();
-      });
-      swal("Poof! Your file has been deleted!", {
-        icon: "success"
-      });
-    } else {
-      swal("Your file is safe!");
-    }
-  });
-}
 
 function adView() {
   let adId = localStorage.getItem("adID");
